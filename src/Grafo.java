@@ -1,7 +1,7 @@
 import java.util.*;
 public class Grafo<T> {
 
-    public HashMap<T, LinkedList<Aresta>> meuGrafo;
+    public HashMap<T, LinkedList<Aresta>> meuGrafo; // lista de adj
     ArrayList<T> visitados;
 
     public Grafo() {
@@ -39,29 +39,30 @@ public class Grafo<T> {
         }
     }
 
-   /*  public boolean alcance(T origem, T destino) {
+     public boolean alcance(T origem, T destino) {
         visitados = new ArrayList<>();
-        return existeCaminho(____, _______, visitados);
+        return existeCaminho(origem, destino, visitados);
     }
 
     private boolean existeCaminho(T verticeAtual, T destino, ArrayList visitados) {
-        if (verticeAtual == _______) 
+        if (verticeAtual == destino) 
             return true;
         visitados.add(verticeAtual);
         LinkedList<Aresta> adjacencias = meuGrafo.get(verticeAtual);
         if (adjacencias != null) 
             for (Aresta<T> aresta : adjacencias)
-                if (!visitados.contains(aresta._____) && existeCaminho(aresta._____, destino, visitados))
+                if (!visitados.contains(aresta.vertice) && existeCaminho(aresta.vertice, destino, visitados))
                     return true;
         return false;
     }
-
+ /*
     public List<T> buscaEmProfundidade(T verticeInicial) {
         visitados = new ArrayList<>();
         explorarDFS(_______, visitados);
         return ________;
     }
     
+   
     private void explorarDFS(T verticeAtual, ArrayList<T> visitados) {
         visitados.add(______);
         LinkedList<Aresta> adjacencias = meuGrafo.get(______);
@@ -95,7 +96,7 @@ public class Grafo<T> {
         return visitados;
     }// fim funcao BFS
 
-    */
+     */
     
 
 }
